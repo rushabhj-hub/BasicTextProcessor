@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Text Processor</title>
+  </head>
+  <body >
+    <nav class="navbar navbar-dark bg-dark">
+  <span class="navbar-brand mb-0 h1">Text Processor</span>
+</nav>
+    <br>
+    <div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">Overview:</h4>
+  <p> Welcome to the text Processor ! Here you can process your text in various ways Give it a try, happy processing!.</p>
+
+</div>
+    <br>
+    <div class="container">
+  <form action='/process' method='post'> {% csrf_token %}
+
+  <div class="form-group">
+      <label for="exampleFormControlTextarea1">Enter your text below:</label>
+    <textarea  class="form-control" name='text' id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+
+  <div class="custom-control custom-switch">
+  <input type="checkbox" name="removepunc" class="custom-control-input" id="cc1">
+  <label class="custom-control-label" for="cc1"> Remove Punctuations </label>
+
+  </div>
+  <div class="custom-control custom-switch">
+  <input type="checkbox" name="capitalize" class="custom-control-input" id="cc2">
+  <label class="custom-control-label" for="cc2"> Capitalize the text </label>
+  </div>
+
+  <div class="custom-control custom-switch">
+  <input type="checkbox" name="decapitalize" class="custom-control-input" id="cc3">
+  <label class="custom-control-label" for="cc3"> Decapitalize the text </label>
+  </div>
+
+  <div class="custom-control custom-switch">
+  <input type="checkbox" name="remspace" class="custom-control-input" id="cc4">
+  <label class="custom-control-label" for="cc4"> Remove spaces </label>
+  </div>
+
+
+  <div class="custom-control custom-switch">
+  <input type="checkbox"  name="remnewline" class="custom-control-input" id="cc5">
+  <label class="custom-control-label" for="cc5"> Remove newlines </label>
+  </div>
+
+   <div class="custom-control custom-switch">
+  <input type="checkbox"  name="remnums" class="custom-control-input" id="cc51">
+  <label class="custom-control-label" for="cc51"> Remove numbers </label>
+  </div>
+
+
+   <div class="custom-control custom-switch">
+  <input type="checkbox" name="ccount" class="custom-control-input" id="cc6">
+  <label class="custom-control-label" for="cc6"> Count of number of characters </label>
+   </div>
+
+    <div class="custom-control custom-switch">
+  <input type="checkbox" name="cword" class="custom-control-input" id="cc7">
+  <label class="custom-control-label" for="cc7"> Count of number of words </label>
+   </div>
+      <br>
+   <button type="submit" class="btn btn-info">Process my text</button>
+</div>
+    </form>
+    </div>
+    </body>
+</html>
